@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "build-only": "vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "vite build && vite gh-pages"
   },
