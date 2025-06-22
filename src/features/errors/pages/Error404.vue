@@ -9,7 +9,7 @@
       movida o eliminada.
     </p>
     <router-link
-      to="/"
+      :to="{ name: 'Home' }"
       class="mt-8 border border-accent text-accent rounded px-8 py-3 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
     >
       Volver al Inicio

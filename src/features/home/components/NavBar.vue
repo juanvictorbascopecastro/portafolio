@@ -19,7 +19,8 @@
           <a
             v-for="(link, index) in navLinks"
             :key="link.name"
-            :href="link.href"
+            href="#"
+            @click.prevent="goToSection(link.href)"
             class="text-gray-300 hover:text-accent transition-colors"
           >
             <span class="text-accent">0{{ index + 1 }}.</span> {{ link.name }}
@@ -68,9 +69,9 @@
         <a
           v-for="(link, index) in navLinks"
           :key="link.name"
-          @click="menuOpen = false"
-          :href="link.href"
-          class="text-2xl my-4 text-gray-300 hover:text-accent transition-colors"
+          href="#"
+          @click.prevent="goToSection(link.href)"
+          class="text-gray-300 hover:text-accent transition-colors"
         >
           <span class="text-accent">0{{ index + 1 }}.</span> {{ link.name }}
         </a>
@@ -104,10 +105,18 @@
 </template>
 
 <script setup lang="ts">
+import myApp from "@/shared/composables";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
 const menuOpen = ref(false);
 const scrolled = ref(false);
+
+const { scrollToSection } = myApp();
+
+const goToSection = (id: string) => {
+  scrollToSection(id);
+  menuOpen.value = false;
+};
 
 interface NavLink {
   name: string;

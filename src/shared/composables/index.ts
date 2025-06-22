@@ -25,7 +25,14 @@ const myApp = () => {
     }
   };
 
-  return { modeDark, isDark };
+  const scrollToSection = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return { modeDark, isDark, scrollToSection };
 };
 
 export default myApp;

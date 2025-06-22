@@ -21,16 +21,10 @@ const routes: Array<any> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: "smooth",
-      };
-    }
-    return savedPosition || { top: 0 };
+  scrollBehavior() {
+    return { top: 0 };
   },
 });
 
