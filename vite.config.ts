@@ -12,7 +12,7 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [vue(), ghPages()],
-  base: "portafolio",
+  base: "https://juanvictorbascopecastro.github.io/portafolio",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
