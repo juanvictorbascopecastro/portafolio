@@ -1,0 +1,46 @@
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from "vue-router";
+import NProgress from "nprogress";
+
+import "nprogress/nprogress.css";
+
+const routes: Array<any> = [
+  {
+    path: "/",
+    name: "Home",
+    component: () => import("@/features/home/pages/HomeView.vue"),
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "Error404",
+    component: () => import("@/features/errors/pages/Error404.vue"),
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+    return savedPosition || { top: 0 };
+  },
+});
+
+// Activar NProgress en navegación
+router.beforeEach(() => {
+  NProgress.start();
+});
+
+router.afterEach(() => {
+  NProgress.done();
+});
+
+export default router;
