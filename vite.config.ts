@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import { ghPages } from "vite-plugin-gh-pages";
 // https://vite.dev/config/
 export default defineConfig({
   optimizeDeps: {
@@ -10,7 +11,8 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
-  plugins: [vue()],
+  plugins: [vue(), ghPages()],
+  base: "portafolio",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
