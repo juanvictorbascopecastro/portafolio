@@ -41,7 +41,7 @@ const techStack = ref<TechStack>({
     "MySQL",
     "SQL Server",
     "Firebase Firestore",
-    "MongoDB",
+    // "MongoDB",
   ],
   Frontend: [
     "Vue.js (2 y 3)",
