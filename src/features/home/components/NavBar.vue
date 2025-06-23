@@ -9,9 +9,14 @@
     }"
   >
     <nav
-      class="container mx-auto px-6 md:px-2 lg:px-6 flex justify-between items-center"
+      class="max-w-screen-xl w-full mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center overflow-x-hidden"
     >
-      <a href="#inicio" class="text-2xl font-bold text-accent font-mono">JV</a>
+      <a
+        @click.prevent="goToSection('#inicio')"
+        href="#"
+        class="text-2xl font-bold text-accent font-mono"
+        >JV</a
+      >
 
       <div class="hidden lg:flex items-center space-x-4">
         <!-- Enlaces de navegación -->
@@ -46,8 +51,7 @@
         <a
           :href="cvPath"
           download="Juan_Victor_Bascope_Castro_CV.pdf"
-          class="ml-4 border border-accent text-accent rounded px-4 py-2 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
-          @click.prevent="downloadCV"
+          class="mt-6 border border-accent text-accent rounded px-6 py-3 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
         >
           Descargar CV
         </a>
@@ -64,7 +68,7 @@
       <!-- MENÚ MÓVIL -->
       <div
         v-if="menuOpen"
-        class="fixed inset-0 bg-[#0a192f]/95 flex flex-col items-center justify-center lg:hidden"
+        class="fixed inset-0 bg-[#0a192f]/95 flex flex-col items-center justify-center lg:hidden px-4 overflow-x-hidden"
       >
         <a
           v-for="(link, index) in navLinks"
@@ -95,7 +99,6 @@
           :href="cvPath"
           download="Juan_Victor_Bascope_Castro_CV.pdf"
           class="mt-6 border border-accent text-accent rounded px-6 py-3 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
-          @click.prevent="downloadCV"
         >
           Descargar CV
         </a>
@@ -157,20 +160,7 @@ const socialLinks = ref<SocialLink[]>([
   },
 ]);
 
-const cvPath = ref("/juan_victor_bascope_castro_cv.pdf");
-
-const downloadCV = () => {
-  const link = document.createElement("a");
-  link.href = cvPath.value;
-  link.download = "Juan_Victor_Bascope_Castro_CV.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  if (menuOpen.value) {
-    menuOpen.value = false;
-  }
-};
+const cvPath = ref("/portafolio/juan_victor_bascope_castro_cv.pdf");
 
 // Lógica del scroll
 const handleScroll = () => {
