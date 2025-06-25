@@ -36,13 +36,7 @@ const techStack = ref<TechStack>({
     "Sequelize & Entity Framework",
     "API RESTful & Socket.io",
   ],
-  "Bases de Datos": [
-    "PostgreSQL",
-    "MySQL",
-    "SQL Server",
-    "Firebase Firestore",
-    // "MongoDB",
-  ],
+  "Bases de Datos": ["PostgreSQL", "MySQL", "SQL Server", "Firebase Firestore"],
   Frontend: [
     "Vue.js (2 y 3)",
     "Angular",

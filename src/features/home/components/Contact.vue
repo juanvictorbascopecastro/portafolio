@@ -33,7 +33,7 @@
     </div>
 
     <!-- Formulario de contacto -->
-    <form v-if="!formSubmitted" @submit.prevent="handleSubmit" class="mt-8">
+    <!-- <form v-if="!formSubmitted" @submit.prevent="handleSubmit" class="mt-8">
       <div class="flex flex-col md:flex-row gap-4 mb-4">
         <input
           type="text"
@@ -71,7 +71,7 @@
     >
       <h4 class="text-2xl font-bold">¡Gracias!</h4>
       <p>Tu mensaje ha sido enviado. Te responderé pronto.</p>
-    </div>
+    </div> -->
   </section>
 </template>
 

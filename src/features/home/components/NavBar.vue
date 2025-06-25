@@ -51,7 +51,7 @@
         <a
           :href="cvPath"
           download="Juan_Victor_Bascope_Castro_CV.pdf"
-          class="mt-6 border border-accent text-accent rounded px-6 py-3 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
+          class="border border-accent text-accent rounded px-6 py-3 font-mono hover:bg-accent hover:bg-opacity-10 transition-colors"
         >
           Descargar CV
         </a>

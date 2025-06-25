@@ -47,6 +47,7 @@ const experiences = ref<Experience[]>([
     title: "Backend Developer / Mobile Developer",
     company: "ioSoftware",
     descriptions: [
+      "Actualmente asumo un rol con mayor responsabilidad en el desarrollo de proyectos.",
       "Contribuyo en la construcción de APIs REST utilizando Yii2 y Java Spring Boot con bases de datos PostgreSQL. ",
       "Participo activamente en el desarrollo de aplicaciones móviles multiplataforma con Flutter. ",
       "Colaboro en tareas de frontend con Vue 3 para aportar soluciones integrales. ",
@@ -57,8 +58,8 @@ const experiences = ref<Experience[]>([
     title: "Desarrollo de Software",
     company: "SVTS",
     descriptions: [
-      "Desarrollé un sistema de gestión para clínicas dentales, implementando una aplicación móvil en Android nativo y una interfaz web con Vue.js 3 y Tailwind CSS. ",
-      "Utilicé servicios de Firebase como Firestore, Authentication, Hosting, Storage y Cloud Functions para crear una solución escalable y segura. ",
+      "Desarrollé un sistema de gestión para clínicas dentales aplicando una metodología ágil que permitió iteraciones rápidas y entregas continuas. Implementé una aplicación móvil en Android nativo y una interfaz web con Vue.js 3 y Tailwind CSS",
+      "Utilicé servicios de Firebase —incluyendo Firestore, Authentication, Hosting, Storage y Cloud Functions— para construir una solución escalable, segura y orientada al usuario.",
     ],
   },
   {
@@ -93,7 +94,7 @@ const experiences = ref<Experience[]>([
     title: "Pasante",
     company: "Universidad San Francisco Xavier de Chuquisaca",
     descriptions: [
-      "Desarrollé una aplicación móvil Android en Java con Firebase para una feria universitaria, proyecto que fue premiado por su innovación. ",
+      "Desarrollé una aplicación móvil Android nativa en Java, con base de datos en Firebase, para una feria universitaria, con el objetivo de prevenir la copia durante exámenes; el proyecto fue premiado por su innovación y funcionalidad",
       "Continué el desarrollo del sistema en la pasantía, implementando una aplicación web complementaria para la gestión de exámenes. ",
     ],
   },

@@ -32,7 +32,7 @@
                 rel="noopener noreferrer"
                 class="text-2xl text-gray-400 hover:text-accent transition-colors ml-2 tooltip-container"
               >
-                <i :class="getLinkIcon(link.type)"></i>
+                <i :class="getLinkIcon(link.type, link.url)"></i>
                 <span class="tooltip-text">{{ link.description }}</span>
               </a>
             </template>
@@ -87,13 +87,17 @@ interface Project {
 }
 
 // Function to determine the icon based on link type
-const getLinkIcon = (type: "web" | "mobile"): string => {
-  if (type === "web") {
-    return "bi bi-globe"; // Icon for web links
-  } else if (type === "mobile") {
-    return "bi bi-phone"; // Icon for mobile links
+const getLinkIcon = (type: "web" | "mobile", url: string): string => {
+  if (type === "mobile" && url.includes("play.google.com")) {
+    return "bi bi-google-play"; // Icono para Play Store
   }
-  return "bi bi-box-arrow-up-right"; // Default fallback icon
+  if (type === "mobile") {
+    return "bi bi-phone"; // Otro tipo de mobile
+  }
+  if (type === "web") {
+    return "bi bi-globe"; // Web icon
+  }
+  return "bi bi-box-arrow-up-right"; // Fallback
 };
 
 const projects = ref<Project[]>([
