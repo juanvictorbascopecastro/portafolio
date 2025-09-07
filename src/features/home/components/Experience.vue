@@ -50,7 +50,7 @@ const experiences = ref<Experience[]>([
       "Actualmente asumo un rol con mayor responsabilidad en el desarrollo de proyectos.",
       "Contribuyo en la construcción de APIs REST utilizando Yii2 y Java Spring Boot con bases de datos PostgreSQL. ",
       "Participo activamente en el desarrollo de aplicaciones móviles multiplataforma con Flutter. ",
-      "Colaboro en tareas de frontend con Vue 3 para aportar soluciones integrales. ",
+      "Colaboro en tareas de frontend con Vue 3 y Typescript para aportar soluciones integrales. ",
     ],
   },
   {
