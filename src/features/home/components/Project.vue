@@ -102,6 +102,25 @@ const getLinkIcon = (type: "web" | "mobile", url: string): string => {
 
 const projects = ref<Project[]>([
   {
+    title: "Capital for live",
+    description:
+      "Aplicación móvil orientada a la gestión de procesos financieros, con soporte para notificaciones en tiempo real, arquitectura escalable y enfoque multitenant.",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.capital.forlive",
+        type: "mobile",
+        description: "Descargar para Android",
+      },
+    ],
+    tags: [
+      "Flutter",
+      "Firebase Messaging",
+      "Java Spring Boot",
+      "PostgreSQL",
+      "Multitenancy",
+    ],
+  },
+  {
     title: "Radio Veritas Comarapa",
     description:
       "Aplicación móvil para la transmisión en vivo de la estación de radio, permitiendo a los usuarios escuchar desde cualquier lugar.",
@@ -109,7 +128,7 @@ const projects = ref<Project[]>([
       {
         url: "https://play.google.com/store/apps/details?id=radio.verita.comarapa",
         type: "mobile",
-        description: "Descargar app móvil (Android)",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["Mobile", "Flutter", "Firebase"],
@@ -127,7 +146,7 @@ const projects = ref<Project[]>([
       {
         url: "https://play.google.com/store/apps/details?id=com.svts.clinicadental",
         type: "mobile",
-        description: "Descargar app móvil (Android)",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["Vue 3", "TailwindCSS", "Firebase", "Android Nativo"],
@@ -140,7 +159,7 @@ const projects = ref<Project[]>([
       {
         url: "https://play.google.com/store/apps/details?id=com.iosoftware.fact",
         type: "mobile",
-        description: "Descargar app móvil (Android)",
+        description: "Descargar para entorno Android",
       },
       { url: "https://ioox.io", type: "web", description: "Ver ioox.io" },
       {
@@ -164,7 +183,7 @@ const projects = ref<Project[]>([
       {
         url: "https://play.google.com/store/apps/details?id=app.employees",
         type: "mobile",
-        description: "Descargar app móvil (Android)",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["Android Native", "Firebase", "Google Maps"],
@@ -217,7 +236,7 @@ const projects = ref<Project[]>([
       {
         url: "https://play.google.com/store/apps/details?id=com.usfx.fis200",
         type: "mobile",
-        description: "Descargar app móvil (Android)",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["JQuery", "Firebase", "Android Nativo"],
