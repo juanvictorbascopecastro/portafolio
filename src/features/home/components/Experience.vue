@@ -43,7 +43,7 @@ interface Experience {
 
 const experiences = ref<Experience[]>([
   {
-    date: "Septiembre 2026 - Actualidad",
+    date: "Septiembre 2025 - Actualidad",
     title: "Analista Funcional",
     company: "Isolcruz S.R.L.",
     descriptions: [
