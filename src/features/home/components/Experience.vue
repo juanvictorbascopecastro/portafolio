@@ -43,11 +43,19 @@ interface Experience {
 
 const experiences = ref<Experience[]>([
   {
-    date: "Junio 2024 - Actualidad",
+    date: "Septiembre 2026 - Actualidad",
+    title: "Analista Funcional",
+    company: "Isolcruz S.R.L.",
+    descriptions: [
+      "Actualmente me desempeño como Analista Funcional, donde mi rol principal es analizar y documentar los requisitos del sistema, colaborar con los equipos para garantizar que las soluciones técnicas cumplan con las necesidades del negocio, y participar en la planificación y diseño de nuevas funcionalidades para mejorar continuamente nuestros servicios.",
+    ],
+  },
+  {
+    date: "Junio 2024 - Septiembre 2025",
     title: "Backend Developer / Mobile Developer",
     company: "ioSoftware",
     descriptions: [
-      "Actualmente asumo un rol con mayor responsabilidad en el desarrollo de proyectos.",
+      "Asumi un rol con mayor responsabilidad en el desarrollo de proyectos.",
       "Contribuyo en la construcción de APIs REST utilizando Yii2 y Java Spring Boot con bases de datos PostgreSQL. ",
       "Participo activamente en el desarrollo de aplicaciones móviles multiplataforma con Flutter. ",
       "Colaboro en tareas de frontend con Vue 3 y Typescript para aportar soluciones integrales. ",
@@ -80,15 +88,15 @@ const experiences = ref<Experience[]>([
       "Participé en el diseño técnico, codificación y despliegue completo del sistema. ",
     ],
   },
-  {
-    date: "2019 - 2020",
-    title: "Mantenimiento y Desarrollo Web",
-    company: "DYA TECHNOLOGY",
-    descriptions: [
-      "Diseñé y desarrollé sitios web y aplicaciones para múltiples clientes con Vue.js 2, Node.js, Express y bases de datos Firebase y PostgreSQL. ",
-      "Participé en proyectos de desarrollo móvil nativo para Android. ",
-    ],
-  },
+  // {
+  //   date: "2019 - 2020",
+  //   title: "Mantenimiento y Desarrollo Web",
+  //   company: "DYA TECHNOLOGY",
+  //   descriptions: [
+  //     "Diseñé y desarrollé sitios web y aplicaciones para múltiples clientes con Vue.js 2, Node.js, Express y bases de datos Firebase y PostgreSQL. ",
+  //     "Participé en proyectos de desarrollo móvil nativo para Android. ",
+  //   ],
+  // },
   {
     date: "2019",
     title: "Pasante",

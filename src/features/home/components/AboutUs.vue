@@ -7,10 +7,11 @@
       <div class="md:col-span-3 text-gray-400 space-y-4">
         <p>
           Mi experiencia se centra en el desarrollo backend, creando soluciones
-          escalables con Node.js y Express, y en la construcción de aplicaciones
-          móviles con Flutter. Disfruto enfrentando retos que me permiten
-          explorar nuevas herramientas y transformar ideas en productos de alto
-          impacto.
+          escalables con <strong>Node.js/Express</strong>,
+          <strong>Java Spring Boot</strong> y en la construcción de aplicaciones
+          móviles con <strong>Flutter</strong>. Disfruto enfrentando retos que
+          me permiten explorar nuevas herramientas y transformar ideas en
+          productos de alto impacto.
         </p>
         <p>
           He trabajado con herramientas de Google Cloud Platform para optimizar
@@ -19,10 +20,10 @@
           eficiencia y colaboración en los equipos de desarrollo.
         </p>
         <p>
-          Creo firmemente en seguir buenas prácticas como Clean Architecture, ya
-          que son esenciales para garantizar la escalabilidad y el mantenimiento
-          a largo plazo de las aplicaciones, asegurando soluciones robustas y
-          adaptables.
+          Creo firmemente en seguir buenas prácticas, aplicar Clean
+          Architecture, ya que son esenciales para garantizar la escalabilidad y
+          el mantenimiento a largo plazo de las aplicaciones, asegurando
+          soluciones robustas y adaptables.
         </p>
       </div>
       <div class="md:col-span-2 flex justify-center">

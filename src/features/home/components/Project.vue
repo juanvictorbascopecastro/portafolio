@@ -102,6 +102,32 @@ const getLinkIcon = (type: "web" | "mobile", url: string): string => {
 
 const projects = ref<Project[]>([
   {
+    title: "Soft Clinic",
+    description:
+      "Sistema SAS para la gestión integral de clínicas dentales, con plataforma web.",
+    links: [
+      {
+        url: "https://soft-clinic-system.web.app",
+        type: "web",
+        description: "Ver plataforma web",
+      },
+      {
+        url: "https://soft-clinic-87f483.gitlab.io",
+        type: "web",
+        description: "Pagona Web",
+      },
+    ],
+    tags: [
+      "Vue 3",
+      "Firestore",
+      "Cloud Functions",
+      "Firestorage",
+      "TailwindCSS",
+      "SAS (Software as a Service)",
+      "Multitenancy",
+    ],
+  },
+  {
     title: "Capital for live",
     description:
       "Aplicación móvil orientada a la gestión de procesos financieros, con soporte para notificaciones en tiempo real, arquitectura escalable y enfoque multitenant.",
@@ -288,7 +314,9 @@ const projects = ref<Project[]>([
   transition: opacity 0.3s;
   font-size: 0.75rem;
   font-weight: normal;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .tooltip-text::after {
