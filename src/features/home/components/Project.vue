@@ -91,6 +91,9 @@ const getLinkIcon = (type: "web" | "mobile", url: string): string => {
   if (type === "mobile" && url.includes("play.google.com")) {
     return "bi bi-google-play"; // Icono para Play Store
   }
+  if (type === "mobile" && url.includes("apps.apple.com")) {
+    return "bi bi-apple"; // Icono para App Store
+  }
   if (type === "mobile") {
     return "bi bi-phone"; // Otro tipo de mobile
   }
@@ -137,6 +140,11 @@ const projects = ref<Project[]>([
         type: "mobile",
         description: "Descargar para Android",
       },
+      {
+        url: "https://apps.apple.com/bo/app/capital-for-live/id6762462914",
+        type: "mobile",
+        description: "Descargar para iOS",
+      },
     ],
     tags: [
       "Flutter",
@@ -156,8 +164,13 @@ const projects = ref<Project[]>([
         type: "mobile",
         description: "Descargar para entorno Android",
       },
+      {
+        url: "https://apps.apple.com/bo/app/radio-veritas-santo-domingo/id6762098497",
+        type: "mobile",
+        description: "Descargar para iOS",
+      },
     ],
-    tags: ["Mobile", "Flutter", "Firebase"],
+    tags: ["Mobile", "iOS", "Flutter", "Firebase"],
   },
   {
     title: "Sistema Clínico Dental Odontosion",
