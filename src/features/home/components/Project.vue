@@ -30,9 +30,9 @@
                 :href="link.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-400 hover:text-accent transition-colors ml-2 tooltip-container"
+                class="text-2xl transition-opacity hover:opacity-80 ml-2 tooltip-container"
               >
-                <i :class="getLinkIcon(link.type, link.url)"></i>
+                <i :class="getLinkIcon(link.type)"></i>
                 <span class="tooltip-text">{{ link.description }}</span>
               </a>
             </template>
@@ -73,7 +73,7 @@ import { ref } from "vue";
 
 interface ProjectLink {
   url: string;
-  type: "web" | "mobile";
+  type: "web" | "android" | "ios";
   description: string;
 }
 
@@ -86,21 +86,18 @@ interface Project {
   tags: string[];
 }
 
-// Function to determine the icon based on link type
-const getLinkIcon = (type: "web" | "mobile", url: string): string => {
-  if (type === "mobile" && url.includes("play.google.com")) {
-    return "bi bi-google-play"; // Icono para Play Store
+// Function to determine the icon and color based on link type
+const getLinkIcon = (type: "web" | "android" | "ios"): string => {
+  if (type === "android") {
+    return "bi bi-android2 text-green-500"; // Icono y color para Android
   }
-  if (type === "mobile" && url.includes("apps.apple.com")) {
-    return "bi bi-apple"; // Icono para App Store
-  }
-  if (type === "mobile") {
-    return "bi bi-phone"; // Otro tipo de mobile
+  if (type === "ios") {
+    return "bi bi-apple text-gray-200"; // Icono y color para iOS
   }
   if (type === "web") {
-    return "bi bi-globe"; // Web icon
+    return "bi bi-globe text-blue-400"; // Web icon y color
   }
-  return "bi bi-box-arrow-up-right"; // Fallback
+  return "bi bi-box-arrow-up-right text-gray-400"; // Fallback
 };
 
 const projects = ref<Project[]>([
@@ -137,12 +134,12 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=com.capital.forlive",
-        type: "mobile",
+        type: "android",
         description: "Descargar para Android",
       },
       {
         url: "https://apps.apple.com/bo/app/capital-for-live/id6762462914",
-        type: "mobile",
+        type: "ios",
         description: "Descargar para iOS",
       },
     ],
@@ -161,12 +158,12 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=radio.verita.comarapa",
-        type: "mobile",
+        type: "android",
         description: "Descargar para entorno Android",
       },
       {
         url: "https://apps.apple.com/bo/app/radio-veritas-santo-domingo/id6762098497",
-        type: "mobile",
+        type: "ios",
         description: "Descargar para iOS",
       },
     ],
@@ -184,7 +181,7 @@ const projects = ref<Project[]>([
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.svts.clinicadental",
-        type: "mobile",
+        type: "android",
         description: "Descargar para entorno Android",
       },
     ],
@@ -197,7 +194,7 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=com.iosoftware.fact",
-        type: "mobile",
+        type: "android",
         description: "Descargar para entorno Android",
       },
       { url: "https://ioox.io", type: "web", description: "Ver ioox.io" },
@@ -221,7 +218,7 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=app.employees",
-        type: "mobile",
+        type: "android",
         description: "Descargar para entorno Android",
       },
     ],
@@ -274,7 +271,7 @@ const projects = ref<Project[]>([
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.usfx.fis200",
-        type: "mobile",
+        type: "android",
         description: "Descargar para entorno Android",
       },
     ],
@@ -287,7 +284,7 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=com.app.victor.game1jvbc",
-        type: "mobile",
+        type: "android",
         description: "Descargar juego (Android)",
       },
     ],
