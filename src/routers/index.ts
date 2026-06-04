@@ -14,6 +14,11 @@ const routes: Array<any> = [
     component: () => import("@/features/home/pages/HomeView.vue"),
   },
   {
+    path: "/politicas-de-privacidad",
+    name: "PrivacyPolicy",
+    component: () => import("@/features/privacy/pages/PrivacyPolicyView.vue"),
+  },
+  {
     path: "/:catchAll(.*)",
     name: "Error404",
     component: () => import("@/features/errors/pages/Error404.vue"),
