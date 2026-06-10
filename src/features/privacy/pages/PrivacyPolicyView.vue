@@ -11,11 +11,16 @@
           Última actualización: {{ lastUpdatedDate }}
         </p>
 
-        <p class="mb-8 text-gray-600 text-lg leading-relaxed">
-          Esta política de privacidad rige para todas las aplicaciones móviles
-          para Android y iOS creadas por TecnoWorld y publicadas en las cuentas
-          de desarrollador con el nombre antes mencionado.
+        <p class="mb-6 text-gray-600 text-lg leading-relaxed">
+          Esta política de privacidad rige de manera general para nuestras aplicaciones móviles. Específicamente, en la plataforma de Android (Google Play), el desarrollador se identifica legalmente bajo el nombre de <strong>victorApp</strong>, mientras que en iOS (App Store) puede figurar bajo nombres como TecnoWorld. Al utilizar nuestras aplicaciones, usted acepta la recopilación y uso de información en relación con esta política.
         </p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+          <p class="text-sm text-blue-700 font-medium">
+            ¿Aplicaciones específicas y delicadas? 
+            <a @click.prevent="scrollToSection('aplicaciones-especificas')" href="#aplicaciones-especificas" class="underline font-bold cursor-pointer hover:text-blue-900">Ver sección de aplicaciones específicas (ej. WorkTrack)</a>
+          </p>
+        </div>
 
         <h2 class="text-2xl font-semibold text-gray-800 mt-10 mb-5">
           ¿Que tipo de información recolectamos?
@@ -27,17 +32,14 @@
 
         <h3 class="text-xl font-medium text-gray-800 mt-8 mb-3">Ubicación</h3>
         <p class="mb-6 text-gray-700 leading-relaxed">
-          Para el caso de las aplicaciones que sea necesario accedemos a los
-          datos proporcionados por el GPS. Estos datos no los manejamos
-          nosotros, son directamente manejado por
+          Para el caso de las aplicaciones que sea necesario, accedemos a los datos proporcionados por el GPS de su dispositivo para garantizar el correcto funcionamiento. Estos datos no son almacenados públicamente por nosotros, sino que son manejados directamente a través de proveedores confiables como 
           <a
             href="https://maps.google.com"
             target="_blank"
             rel="noopener noreferrer"
             class="text-blue-600 hover:text-blue-800 transition-colors underline decoration-blue-300 underline-offset-2"
             >Google Maps</a
-          >
-          (nuestro proveedor de mapas).
+          >.
         </p>
 
         <h3 class="text-xl font-medium text-gray-800 mt-8 mb-3">
@@ -192,7 +194,33 @@
           </li>
         </ul>
 
-        <h3 class="text-xl font-medium text-gray-800 mt-8 mb-3">
+        <h2 id="aplicaciones-especificas" class="text-2xl font-semibold text-gray-800 mt-12 mb-5 pt-8 border-t">
+          Políticas para Aplicaciones Específicas
+        </h2>
+        <p class="mb-6 text-gray-700 leading-relaxed">
+          Algunas de nuestras aplicaciones cuentan con funcionalidades más complejas y requieren permisos especiales. A continuación, se detalla la política legal aplicable estrictamente a estas aplicaciones en particular:
+        </p>
+
+        <div class="bg-gray-100 p-6 rounded-lg mb-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Aplicación: WorkTrack</h3>
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            <strong>Nombre del Desarrollador (Google Play / Android):</strong> victorApp
+          </p>
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            <strong>Público Objetivo (Uso Empresarial):</strong> WorkTrack está diseñada específicamente como una herramienta corporativa orientada a empresas que cuentan con promotores de calle, guardias de seguridad en vecindarios o barrios, o cualquier organización que implemente políticas de monitoreo de su personal durante la jornada laboral. El objetivo de la aplicación es brindar a las empresas un mejor control logístico, seguridad y gestión operativa de sus colaboradores en campo.
+          </p>
+          <p class="mb-2 text-gray-700 leading-relaxed">
+            <strong>Uso y Recopilación de Ubicación (Incluyendo Segundo Plano):</strong> 
+          </p>
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            Para el correcto funcionamiento de <strong>WorkTrack</strong>, la aplicación recopila y accede a los datos de ubicación proporcionados por el GPS de su dispositivo. <strong>Esta recopilación de ubicación se realiza incluso en segundo plano (cuando la aplicación está cerrada o no está en uso)</strong>. Utilizamos estos datos exclusivamente para permitir el seguimiento continuo de sus rutas de trabajo y registrar adecuadamente su actividad según las funcionalidades principales de la aplicación.
+          </p>
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            <strong>Control del Usuario sobre el Monitoreo:</strong> El usuario final tiene el control total para especificar cuándo puede ser monitoreado y cuándo no. El usuario puede decidir activar o inactivar la geolocalización en cualquier momento desde la configuración de su dispositivo o mediante las opciones proporcionadas dentro de la aplicación, deteniendo así cualquier recolección de datos de ubicación al instante.
+          </p>
+        </div>
+
+        <h3 class="text-xl font-medium text-gray-800 mt-12 mb-3 pt-8 border-t">
           Derechos de los Usuarios
         </h3>
         <p class="mb-6 text-gray-700 leading-relaxed">
@@ -255,5 +283,12 @@
 </template>
 
 <script setup lang="ts">
-const lastUpdatedDate = "04 junio 2026";
+const lastUpdatedDate = "10 junio 2026";
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 </script>
