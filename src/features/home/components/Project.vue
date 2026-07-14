@@ -101,6 +101,36 @@ const getLinkIcon = (type: "web" | "android" | "ios"): string => {
 };
 
 const projects = ref<Project[]>([
+  /* {
+    title: "Medi Reminder",
+    description: "",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.medi.reminder",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+    ],
+    tags: ["Flutter", "Firebase"],
+  }, */
+  {
+    title: "Mundial 2026",
+    description:
+      "Aplicación móvil para seguir el mundial 2026. Y realizar apuestas entre amigos",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.jvb.futbol.mundial",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://apps.apple.com/app/futbol-mundial-2026/id6778427741",
+        type: "ios",
+        description: "Descargar para entorno iOS",
+      },
+    ],
+    tags: ["Flutter", "Firebase", "API REST worldcup26.ir"],
+  },
   {
     title: "Soft Clinic",
     description:
@@ -133,7 +163,7 @@ const projects = ref<Project[]>([
       "Aplicación móvil orientada a la gestión de procesos financieros, con soporte para notificaciones en tiempo real, arquitectura escalable y enfoque multitenant.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=com.capital.forlive",
+        url: "https://play.google.com/store/apps/details?id=com.capitalforlive",
         type: "android",
         description: "Descargar para Android",
       },
@@ -157,7 +187,7 @@ const projects = ref<Project[]>([
       "Aplicación móvil para la transmisión en vivo de la estación de radio, permitiendo a los usuarios escuchar desde cualquier lugar.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=radio.verita.comarapa",
+        url: "https://play.google.com/store/apps/details?id=com.radio.verita.comarapa",
         type: "android",
         description: "Descargar para entorno Android",
       },
@@ -217,9 +247,15 @@ const projects = ref<Project[]>([
       "App móvil para el seguimiento y gestión de la jornada laboral de los empleados en tiempo real.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=app.employees",
+        url: "https://play.google.com/store/apps/details?id=com.softclinic.worktrack",
         type: "android",
         description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://worktrackbolivia.web.app/",
+        type: "web",
+        description:
+          "Gestiona ubicaciones en tiempo real desde el siguiente enlace",
       },
     ],
     tags: ["Android Native", "Firebase", "Google Maps"],
@@ -283,7 +319,7 @@ const projects = ref<Project[]>([
       "Un sencillo y adictivo juego para Android donde el objetivo es guiar a un ave y alcanzar la máxima puntuación posible.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=com.app.victor.game1jvbc",
+        url: "https://play.google.com/store/apps/details?id=com.game.gerardo",
         type: "android",
         description: "Descargar juego (Android)",
       },
