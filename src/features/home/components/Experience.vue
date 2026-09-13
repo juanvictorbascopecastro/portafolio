@@ -58,19 +58,19 @@ const experiences = ref<Experience[]>([
     ],
   },
   {
-    date: "Junio 2024 - Septiembre 2025",
-    title: "Backend Developer / Mobile Developer",
+    date: "Junio 2024 - Agosto 2025",
+    title: "Desarrollador Backend / Mobile",
     company: "ioSoftware",
     descriptions: [
-      "Asumi un rol con mayor responsabilidad en el desarrollo de proyectos.",
-      "Contribuyo en la construcción de APIs REST utilizando Yii2 y Java Spring Boot con bases de datos PostgreSQL. ",
-      "Participo activamente en el desarrollo de aplicaciones móviles multiplataforma con Flutter. ",
-      "Colaboro en tareas de frontend con Vue 3 y Typescript para aportar soluciones integrales. ",
+      "Asumí una mayor responsabilidad en el desarrollo de proyectos, centrándome en el backend con PHP-Yii Framework. Destaco mi experiencia en la integración y consumo de servicios API REST del SIAT (Facturación Electrónica).",
+      "Las funcionalidades operan en tiempo real, conectándose dinámicamente a múltiples bases de datos basadas en tokens de usuarios gestionados desde una base de datos core.",
+      "Participé activamente en el desarrollo de aplicaciones móviles multiplataforma con Flutter, asegurando compatibilidad en iOS/Android.",
+      "Colaboré en tareas de frontend con Vue 3 y Tailwind CSS para interfaces responsivas.",
     ],
   },
   {
     date: "Octubre 2023 - Mayo 2024",
-    title: "Desarrollo de Software",
+    title: "Desarrollador Fullstack",
     company: "SVTS",
     descriptions: [
       "Desarrollé un sistema de gestión para clínicas dentales aplicando una metodología ágil que permitió iteraciones rápidas y entregas continuas. Implementé una aplicación móvil en Android nativo y una interfaz web con Vue.js 3 y Tailwind CSS",
@@ -78,8 +78,8 @@ const experiences = ref<Experience[]>([
     ],
   },
   {
-    date: "Marzo 2022 - Septiembre 2022",
-    title: "Desarrollo Web Backend",
+    date: "Marzo 2022 - Septiembre 2023",
+    title: "Desarrollador Backend",
     company: "PIAR BOLIVIA",
     descriptions: [
       "Colaboré en el desarrollo de una API RESTful para un sistema de laboratorios clínicos usando Node.js, Express y Sequelize con MySQL. ",
@@ -87,8 +87,8 @@ const experiences = ref<Experience[]>([
     ],
   },
   {
-    date: "Marzo 2022 - Junio 2022",
-    title: "Desarrollo de Aplicaciones Web",
+    date: "2021 - 2022",
+    title: "Desarrollador Full Stack",
     company: "INFOX TECNOLOGIA",
     descriptions: [
       "Desarrollé un sistema de gestión contable en modalidad remota utilizando Angular y Entity Framework Core con SQL Server. ",

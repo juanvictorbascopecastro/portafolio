@@ -132,29 +132,29 @@ const projects = ref<Project[]>([
     tags: ["Flutter", "Firebase", "API REST worldcup26.ir"],
   },
   {
-    title: "Soft Clinic",
+    title: "Softclinic",
     description:
-      "Sistema SAS para la gestión integral de clínicas dentales, con plataforma web.",
+      "Sistema SaaS para la gestión integral de clínicas dentales, con plataforma web, automatización con IA y WhatsApp.",
     links: [
+      {
+        url: "https://softclinic.site.je",
+        type: "web",
+        description: "Ver plataforma principal",
+      },
       {
         url: "https://soft-clinic-system.web.app",
         type: "web",
-        description: "Ver plataforma web",
-      },
-      {
-        url: "https://soft-clinic-87f483.gitlab.io",
-        type: "web",
-        description: "Pagona Web",
+        description: "Ver plataforma alternativa",
       },
     ],
     tags: [
       "Vue 3",
+      "WhatsApp API",
+      "Inteligencia Artificial",
       "Firestore",
       "Cloud Functions",
-      "Firestorage",
       "TailwindCSS",
-      "SAS (Software as a Service)",
-      "Multitenancy",
+      "SaaS",
     ],
   },
   {
