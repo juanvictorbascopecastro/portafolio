@@ -5,16 +5,13 @@
       Juan Victor Bascope Castro.
     </h2>
     <h3 class="text-2xl md:text-6xl font-bold text-gray-400 mt-2">
-      Desarrollador Backend y Móvil Android Nativo.
+      Desarrollador full stack para entornos empresariales.
     </h3>
     <p class="mt-6 max-w-xl text-gray-400">
-      Como Ingeniero en Sistemas, mi experiencia se enfoca en el desarrollo de
-      software, principalmente en el backend en la creación de APIs RESTful, así
-      como en la estructura y diseño de bases de datos que permitan escalar
-      aplicaciones robustas. Al inicio de mi carrera también trabajé en el
-      desarrollo de aplicaciones móviles nativas enfocadas en el sistema
-      operativo Android, y posteriormente fui incorporando el desarrollo de
-      aplicaciones multiplataforma utilizando Flutter para Android e iOS.
+      Soy un profesional proactivo y dinámico que se adapta fácilmente a
+      entornos de trabajo colaborativos. Mi enfoque se centra en comprender a
+      fondo los procesos de negocio para planificar, diseñar y ofrecer
+      soluciones integrales óptimas.
     </p>
     <div class="mt-8 flex items-center space-x-6">
       <a
