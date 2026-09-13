@@ -47,7 +47,14 @@ const experiences = ref<Experience[]>([
     title: "Analista Funcional",
     company: "Isolcruz S.R.L.",
     descriptions: [
-      "Actualmente me desempeño como Analista Funcional, donde mi rol principal es analizar y documentar los requisitos del sistema, colaborar con los equipos para garantizar que las soluciones técnicas cumplan con las necesidades del negocio, y participar en la planificación y diseño de nuevas funcionalidades para mejorar continuamente nuestros servicios.",
+      `
+      Actualmente me desempeño como Analista Funcional, diseñando soluciones técnicas, definiendo especificaciones del sistema y trabajando junto a los equipos de diferentes areas para implementar mejoras que respondan a las necesidades del negocio.
+      
+      `,
+      `En este puesto he enfrentado distintos retos relacionados con los sistemas que utiliza la empresa. Para responder a ellos, se implementó una estructura capaz de gestionar el flujo de trabajo de las diferentes áreas de la empresa —producción, control de mano de obra, ventas y recursos humanos— control en tiempo real de dispositivos biométricos mediante red. Asimismo, se implementó un sistema de registro de asistencia mediante reconocimiento de documento de identidad y reconocimiento facial para el control de acceso, y se incorporó la geolocalización en tiempo real de los dispositivos corporativos para el control de equipos móviles y del personal.
+      `,
+      `Además, para cubrir distintas necesidades de gestión, la empresa utiliza sistemas de contabilidad de terceros que apoyan la administración general.`,
+      `El objetivo de estas mejoras es automatizar procesos, generar reportes más exactos y confiables, y brindar a la gerencia mayor control y visibilidad sobre el estado actual de cada área, minimizando errores. El principal reto es que los procesos de cada área son cada vez más complejos, lo que exige un análisis detallado para cubrir sus necesidades específicas.`,
     ],
   },
   {

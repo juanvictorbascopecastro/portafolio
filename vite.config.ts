@@ -11,7 +11,8 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [vue()],
-  base: "/portafolio",
+  // base: "/portafolio",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

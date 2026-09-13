@@ -160,7 +160,7 @@ const socialLinks = ref<SocialLink[]>([
   },
 ]);
 
-const cvPath = ref("/portafolio/juan_victor_bascope_castro_cv.pdf");
+const cvPath = ref(`${import.meta.env.BASE_URL}juan_victor_bascope_castro_cv.pdf`);
 
 // Lógica del scroll
 const handleScroll = () => {
