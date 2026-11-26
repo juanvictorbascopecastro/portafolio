@@ -1,7 +1,7 @@
 <template>
   <NavBar />
 
-  <main class="px-6 md:px-12 lg:px-24 py-20">
+  <main class="px-6 md:px-12 lg:px-24 md:py-20">
     <Portada />
     <AboutUs />
 
