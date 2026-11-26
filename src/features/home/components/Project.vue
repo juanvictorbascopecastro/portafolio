@@ -30,7 +30,7 @@
                 :href="link.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-2xl text-gray-400 hover:text-accent transition-colors ml-2 tooltip-container"
+                class="text-2xl transition-opacity hover:opacity-80 ml-2 tooltip-container"
               >
                 <i :class="getLinkIcon(link.type)"></i>
                 <span class="tooltip-text">{{ link.description }}</span>
@@ -73,7 +73,7 @@ import { ref } from "vue";
 
 interface ProjectLink {
   url: string;
-  type: "web" | "mobile";
+  type: "web" | "android" | "ios";
   description: string;
 }
 
@@ -86,29 +86,128 @@ interface Project {
   tags: string[];
 }
 
-// Function to determine the icon based on link type
-const getLinkIcon = (type: "web" | "mobile"): string => {
-  if (type === "web") {
-    return "bi bi-globe"; // Icon for web links
-  } else if (type === "mobile") {
-    return "bi bi-phone"; // Icon for mobile links
+// Function to determine the icon and color based on link type
+const getLinkIcon = (type: "web" | "android" | "ios"): string => {
+  if (type === "android") {
+    return "bi bi-android2 text-green-500"; // Icono y color para Android
   }
-  return "bi bi-box-arrow-up-right"; // Default fallback icon
+  if (type === "ios") {
+    return "bi bi-apple text-gray-200"; // Icono y color para iOS
+  }
+  if (type === "web") {
+    return "bi bi-globe text-blue-400"; // Web icon y color
+  }
+  return "bi bi-box-arrow-up-right text-gray-400"; // Fallback
 };
 
 const projects = ref<Project[]>([
+  /* {
+    title: "Medi Reminder",
+    description: "",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.medi.reminder",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+    ],
+    tags: ["Flutter", "Firebase"],
+  }, */
+  
+  {
+    title: "Softclinic",
+    description:
+      "Sistema SaaS para la gestión integral de clínicas dentales, con plataforma web, automatización con IA y WhatsApp.",
+    links: [
+      {
+        url: "https://softclinic.site",
+        type: "web",
+        description: "Ver plataforma principal",
+      },
+      {
+        url: "https://soft-clinic-system.web.app",
+        type: "web",
+        description: "Ver plataforma alternativa",
+      },
+      {
+        url: "https://play.google.com/store/apps/details?id=com.soft.clinic",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://apps.apple.com/app/id6776636789",
+        type: "ios",
+        description: "Descargar para entorno iOS",
+      },
+    ],
+    tags: [
+      "Vue 3",
+      "WhatsApp API",
+      "Inteligencia Artificial",
+      "Firestore",
+      "Cloud Functions",
+      "TailwindCSS",
+      "SaaS",
+    ],
+  },{
+    title: "Mundial 2026",
+    description:
+      "Aplicación móvil para seguir el mundial 2026. Y realizar apuestas entre amigos",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.jvb.futbol.mundial",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://apps.apple.com/app/futbol-mundial-2026/id6778427741",
+        type: "ios",
+        description: "Descargar para entorno iOS",
+      },
+    ],
+    tags: ["Flutter", "Firebase", "API REST worldcup26.ir"],
+  },
+  {
+    title: "Capital for live",
+    description:
+      "Aplicación móvil orientada a la gestión de procesos financieros, con soporte para notificaciones en tiempo real, arquitectura escalable y enfoque multitenant.",
+    links: [
+      {
+        url: "https://play.google.com/store/apps/details?id=com.capitalforlive",
+        type: "android",
+        description: "Descargar para Android",
+      },
+      {
+        url: "https://apps.apple.com/bo/app/capital-for-live/id6762462914",
+        type: "ios",
+        description: "Descargar para iOS",
+      },
+    ],
+    tags: [
+      "Flutter",
+      "Firebase Messaging",
+      "Java Spring Boot",
+      "PostgreSQL",
+      "Multitenancy",
+    ],
+  },
   {
     title: "Radio Veritas Comarapa",
     description:
       "Aplicación móvil para la transmisión en vivo de la estación de radio, permitiendo a los usuarios escuchar desde cualquier lugar.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=radio.verita.comarapa",
-        type: "mobile",
-        description: "Descargar app móvil (Android)",
+        url: "https://play.google.com/store/apps/details?id=com.radio.verita.comarapa",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://apps.apple.com/bo/app/radio-veritas-santo-domingo/id6762098497",
+        type: "ios",
+        description: "Descargar para iOS",
       },
     ],
-    tags: ["Mobile", "Flutter", "Firebase"],
+    tags: ["Mobile", "iOS", "Flutter", "Firebase"],
   },
   {
     title: "Sistema Clínico Dental Odontosion",
@@ -122,8 +221,8 @@ const projects = ref<Project[]>([
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.svts.clinicadental",
-        type: "mobile",
-        description: "Descargar app móvil (Android)",
+        type: "android",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["Vue 3", "TailwindCSS", "Firebase", "Android Nativo"],
@@ -135,8 +234,8 @@ const projects = ref<Project[]>([
     links: [
       {
         url: "https://play.google.com/store/apps/details?id=com.iosoftware.fact",
-        type: "mobile",
-        description: "Descargar app móvil (Android)",
+        type: "android",
+        description: "Descargar para entorno Android",
       },
       { url: "https://ioox.io", type: "web", description: "Ver ioox.io" },
       {
@@ -158,9 +257,25 @@ const projects = ref<Project[]>([
       "App móvil para el seguimiento y gestión de la jornada laboral de los empleados en tiempo real.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=app.employees",
-        type: "mobile",
-        description: "Descargar app móvil (Android)",
+        url: "https://play.google.com/store/apps/details?id=com.softclinic.worktrack",
+        type: "android",
+        description: "Descargar para entorno Android",
+      },
+      {
+        url: "https://play.google.com/store/apps/details?id=com.softclinic.worktrack.family",
+        type: "android",
+        description: "Descargar WorkTrack Family para entorno Android",
+      },
+      {
+        url: "https://apps.apple.com/app/worktrack-monitoreo-personal/id6821604619",
+        type: "ios",
+        description: "Descargar para entorno iOS",
+      },
+      {
+        url: "https://worktrackbolivia.web.app/",
+        type: "web",
+        description:
+          "Gestiona ubicaciones en tiempo real desde el siguiente enlace",
       },
     ],
     tags: ["Android Native", "Firebase", "Google Maps"],
@@ -212,8 +327,8 @@ const projects = ref<Project[]>([
       },
       {
         url: "https://play.google.com/store/apps/details?id=com.usfx.fis200",
-        type: "mobile",
-        description: "Descargar app móvil (Android)",
+        type: "android",
+        description: "Descargar para entorno Android",
       },
     ],
     tags: ["JQuery", "Firebase", "Android Nativo"],
@@ -224,8 +339,8 @@ const projects = ref<Project[]>([
       "Un sencillo y adictivo juego para Android donde el objetivo es guiar a un ave y alcanzar la máxima puntuación posible.",
     links: [
       {
-        url: "https://play.google.com/store/apps/details?id=com.app.victor.game1jvbc",
-        type: "mobile",
+        url: "https://play.google.com/store/apps/details?id=com.game.gerardo",
+        type: "android",
         description: "Descargar juego (Android)",
       },
     ],
@@ -265,7 +380,9 @@ const projects = ref<Project[]>([
   transition: opacity 0.3s;
   font-size: 0.75rem;
   font-weight: normal;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .tooltip-text::after {

@@ -33,7 +33,7 @@ const techStack = ref<TechStack>({
     "Node.js & Express",
     "PHP & Yii Framework 2",
     "Java & Spring Boot",
-    "Sequelize & Entity Framework",
+    "C# & Entity Framework Core",
     "API RESTful & Socket.io",
   ],
   "Bases de Datos": [
@@ -48,9 +48,13 @@ const techStack = ref<TechStack>({
     "Angular",
     "TypeScript & JavaScript",
     "Tailwind CSS & Bootstrap",
-    "CSS3 & AJAX",
   ],
-  Móvil: ["Flutter & Dart", "Android Nativo (Java)"],
+  Móvil: [
+    "Flutter & Dart",
+    "Kotlin Multiplatform (Android e iOS)",
+    "Kotlin & Android Nativo",
+    "iOS",
+  ],
   "Infraestructura y Servicios": [
     "Google Cloud Platform",
     "Firebase Suite",
